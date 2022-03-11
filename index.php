@@ -82,7 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        
          
         <button type="submit" class="btn btn-primary" >Login</button></br></br>
-        Need an accound? <a href="/LoginSystem/signup.php">SIGN_UP</a>
+        Need an accound? <a href="/Placement-Portal-Archathon/signup.php">SIGN_UP</a>
      </form>
      
     </div>
