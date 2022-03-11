@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $showAlert = false;
 $showError = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -9,6 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cpassword = $_POST["cpassword"];
     $collegename = $_POST['collegename'];
     $department = $_POST['dept'];
+    $collegeid = $_POST['collegeid'];
+    $email = $_POST['email'];
+    $phoneno = $_POST['phoneno'];
+    $address = $_POST['address'];
     // $exists=false;
 
     // Check whether this username exists
@@ -23,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (($password == $cpassword)) {
             $hash = password_hash($password, PASSWORD_DEFAULT);
             // $hash = $password;
-            $sql = "INSERT INTO `users` ( `username`,`Full_Name`, `password`,`College_Name`,`Department`, `dt`) VALUES ('$username','$fullname', '$hash','$collegename','$department', current_timestamp())";
+            $sql = "INSERT INTO `users` ( `username`,`Full_Name`,`collegeid`,`email`,`phoneno`,`address`, `password`,`College_Name`,`Department`, `dt`) VALUES ('$username','$fullname','$collegeid','$email','$phoneno','$address', '$hash','$collegename','$department', current_timestamp())";
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 $showAlert = true;
@@ -87,6 +93,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="collegename">College Name</label>
                 <input type="text" maxlength="25" class="form-control" id="collegename" name="collegename" aria-describedby="emailHelp" required>
+
+            </div>
+            <div class="form-group">
+                <label for="collegeid">CollegeId</label>
+                <input type="text" maxlength="25" class="form-control" id="collegeid" name="collegeid" aria-describedby="emailHelp" required>
+
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" maxlength="25" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+
+            </div>
+            <div class="form-group">
+                <label for="phoneno">Phone No</label>
+                <input type="text" maxlength="25" class="form-control" id="phoneno" name="phoneno" aria-describedby="emailHelp" required>
+
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" maxlength="25" class="form-control" id="address" name="address" aria-describedby="addresshelp" required>
 
             </div>
             <div class="form-group">

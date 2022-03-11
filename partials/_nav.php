@@ -30,9 +30,9 @@
           <a class="nav-link" href="logout.php">logout</a>
         </li>
         <li class="nav-item dropdown  me-2 d-flex" style="display:relative;float:right;">
-          <a class="nav-link dropdown-toggle my-2 my-sm-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
+          <a class="nav-link dropdown-toggle my-2 my-sm-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">'
+          .$_SESSION['username'].  
+         ' </a>
           <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
