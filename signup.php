@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <label for="fullname">Full Name</label>
                 <input type="text" maxlength="25" class="form-control" id="fullname" name="fullname" aria-describedby="emailHelp" required>
-dhwfhhjfbdjh
+
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
@@ -96,7 +96,11 @@ dhwfhhjfbdjh
                     <option value="2">Civil Engineering</option>
                     <option value="3">BCA</option>
                     <option value="4">Mechanical Enginerring</option>
-                </select>
+                    <option value="2">JavaScript</option>
+                    <option value="3">PHP</option>
+                    <option value="4">Python</option>
+                    <option value="5">HTML</option>
+                 </select>
             </div>
 
             <div class="form-group">
