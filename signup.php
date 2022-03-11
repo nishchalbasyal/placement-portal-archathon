@@ -70,20 +70,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="container my-4">
         <h1 class="text-center">Signup to our website</h1>
-        <form action="/LoginSystem1/Placement-Portal-Archathon1/signup.php" method="post">
+        <form action="signup.php" method="post">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" maxlength="25" class="form-control" id="fullname" name="fullname" aria-describedby="emailHelp" required>
+                <input type="text" maxlength="25" class="form-control" id="fullname" name="fullname" aria-describedby="emailHelp">
 
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp" required>
+                <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp">
 
             </div>
             <div class="form-group">
                 <label for="collegename">College Name</label>
-                <input type="text" maxlength="25" class="form-control" id="collegename" name="collegename" aria-describedby="emailHelp" required>
+                <input type="text" maxlength="25" class="form-control" id="collegename" name="collegename" aria-describedby="emailHelp">
 
             </div>
             <div class="form-group">
@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" maxlength="23" class="form-control" id="password" name="password" required>
+                <input type="password" maxlength="23" class="form-control" id="password" name="password">
             </div>
             <div class="form-group">
                 <label for="cpassword">Confirm Password</label>

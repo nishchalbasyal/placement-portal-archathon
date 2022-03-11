@@ -41,7 +41,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
   <li>Civil Engineering</li>
 </ul>
 </div>
-  <form action='/LoginSystem1/Placement-Portal-Archathon1/logout.php'>
+  <form action='/LoginSystem/logout.php'>
     <button class="btn-primary" style="color:black;" href="/LoginSystem/logout.php">Logout</button>
   </form>
 

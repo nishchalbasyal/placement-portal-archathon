@@ -69,20 +69,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <div class="container my-4">
      <h1 class="text-center">Login  to our website</h1>
-     <form action="/LoginSystem1/Placement-Portal-Archathon1/login.php" method="post">
+     <form action="login.php" method="post">
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp" required>
+            <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp">
             
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" maxlength="23" class="form-control" id="password" name="password" required>
+            <input type="password" maxlength="23" class="form-control" id="password" name="password">
         </div>
        
          
         <button type="submit" class="btn btn-primary" >Login</button></br></br>
-        Need an accound? <a href="/Placement-Portal-Archathon/signup.php">SIGN_UP</a>
+        Need an accound? <a href="signup.php">SIGN_UP</a>
      </form>
      
     </div>
