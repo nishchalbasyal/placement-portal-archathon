@@ -61,7 +61,7 @@ $show = false;
                 <!-- <li></li> -->
             </ul>
         <div class="submit">
-            <input type="submit" value="Start your test now">
+            <input type="submit" value="Start your test now" class="btn btn-primary">
         </div>
             
 
