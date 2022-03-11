@@ -32,6 +32,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     <hr>
     <p class="mb-0">Whenever you need to, be sure to click on the logout button</p>
   </div>
+  <div>
   Departments:
 <ul>
   <li >Computer Engineering</li>
@@ -39,6 +40,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
   <li>Electrical Engineering</li>
   <li>Civil Engineering</li>
 </ul>
+</div>
   <form action='/LoginSystem/logout.php'>
     <button class="btn-primary" style="color:black;" href="/LoginSystem/logout.php">Logout</button>
   </form>
