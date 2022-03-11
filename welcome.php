@@ -32,15 +32,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     <hr>
     <p class="mb-0">Whenever you need to, be sure to click on the logout button</p>
   </div>
-  <div>
-  Departments:
-<ul>
-  <li >Computer Engineering</li>
-  <li>Mechanical Engineering</li>
-  <li>Electrical Engineering</li>
-  <li>Civil Engineering</li>
+  <!-- <div class="middle" style="display:flex; align-items:center;"> -->
+  <ul class="list-group list-group-flush">
+  <li class="list-group-item" style="font-weight:bolder; font-size:larger; text-align:center;">Please select any of the field</li>
+  <li class="list-group-item" style="text-align:center;"><a href="Computer.php">Computer Engineering</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="Mechanical.php">Mechanical Engineering</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="Electrical.php">Electrical Engineering</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="Civil.php">Civil Engineering</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="php.php">PHP</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="java.php">Java </a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="javascript.php">JavaScript </a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="Android.php">Android Developing</a></li>
+  
 </ul>
-</div>
+<!-- </div> -->
   <form action='/LoginSystem/logout.php'>
     <button class="btn-primary" style="color:black;" href="/LoginSystem/logout.php">Logout</button>
   </form>
