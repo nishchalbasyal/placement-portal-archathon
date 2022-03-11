@@ -72,12 +72,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      <form action="/loginsystem/login.php" method="post">
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+            <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp" required>
             
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" maxlength="23" class="form-control" id="password" name="password">
+            <input type="password" maxlength="23" class="form-control" id="password" name="password" required>
         </div>
        
          
