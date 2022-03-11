@@ -3,9 +3,12 @@ $showAlert = false;
 $showError = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'partials/_dbconnect.php';
+    $fullname = $_POST['fullname'];
     $username = $_POST["username"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
+    $collegename = $_POST['collegename'];
+    $department = $_POST['dept'];
     // $exists=false;
 
     // Check whether this username exists
@@ -20,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (($password == $cpassword)) {
             $hash = password_hash($password, PASSWORD_DEFAULT);
             // $hash = $password;
-            $sql = "INSERT INTO `users` ( `username`, `password`, `dt`) VALUES ('$username', '$hash', current_timestamp())";
+            $sql = "INSERT INTO `users` ( `username`,`Full_Name`, `password`,`College_Name`,`Department`, `dt`) VALUES ('$username','$fullname', '$hash','$collegename','$department', current_timestamp())";
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 $showAlert = true;
@@ -87,18 +90,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             </div>
             <div class="form-group">
-                <select class="form-select form-select-lg mb-3 form-control" aria-label=".form-select-lg example" required>
+                <select class="form-select form-select-lg mb-3 form-control" aria-label=".form-select-lg example" name="dept">
                     <option selected style="font-weight:bold">Select Your Department</option>
                     <option value="1">Computer Engineering</option>
                     <option value="2">Civil Engineering</option>
                     <option value="3">BCA</option>
                     <option value="4">Mechanical Enginerring</option>
-                </select>
+                    <option value="2">JavaScript</option>
+                    <option value="3">PHP</option>
+                    <option value="4">Python</option>
+                    <option value="5">HTML</option>
+                 </select>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" maxlength="23" class="form-control" id="password" name="password" required>
+                <input type="password" maxlength="23" class="form-control" id="password" name="password" required> 
             </div>
             <div class="form-group">
                 <label for="cpassword">Confirm Password</label>
