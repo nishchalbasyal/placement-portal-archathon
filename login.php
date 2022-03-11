@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <div class="container my-4">
      <h1 class="text-center">Login  to our website</h1>
-     <form action="/loginsystem/login.php" method="post">
+     <form action="/LoginSystem1/Placement-Portal-Archathon1/login.php" method="post">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp">

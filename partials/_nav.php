@@ -15,19 +15,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/LoginSystem/welcome.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="/LoginSystem1/Placement-Portal-Archathon1/welcome.php">Home</a>
         </li>';
       if(!$loggedin){
       echo  ' <li class="nav-item">
-          <a class="nav-link" href="/LoginSystem/login.php">Login</a>
+          <a class="nav-link" href="/LoginSystem1/Placement-Portal-Archathon1/login.php">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/LoginSystem/signup.php">signup</a>
+          <a class="nav-link" href="/LoginSystem1/Placement-Portal-Archathon1/signup.php">signup</a>
         </li>';
       }
       if($loggedin){
        echo ' <li class="nav-item">
-          <a class="nav-link" href="/LoginSystem/logout.php">logout</a>
+          <a class="nav-link" href="/LoginSystem1/Placement-Portal-Archathon1/logout.php">logout</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
