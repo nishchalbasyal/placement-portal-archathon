@@ -71,14 +71,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
   <!-- <div class="middle" style="display:flex; align-items:center;"> -->
   <ul class="list-group list-group-flush">
   <li class="list-group-item" style="font-weight:bolder; font-size:larger; text-align:center;">Please select any of the field</li>
-  <li class="list-group-item" style="text-align:center;"><a href="Computer.php">Computer Engineering</a></li>
-  <li class="list-group-item" style="text-align:center;"><a href="Mechanical.php">Mechanical Engineering</a></li>
-  <li class="list-group-item" style="text-align:center;"><a href="Electrical.php">Electrical Engineering</a></li>
-  <li class="list-group-item" style="text-align:center;"><a href="Civil.php">Civil Engineering</a></li>
-  <li class="list-group-item" style="text-align:center;"><a href="php.php">PHP</a></li>
-  <li class="list-group-item" style="text-align:center;"><a href="java.php">Java </a></li>
-  <li class="list-group-item" style="text-align:center;"><a href="javascript.php">JavaScript </a></li>
-  <li class="list-group-item" style="text-align:center;"><a href="Android.php">Android Developing</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="quiz/Computer.php">Computer Engineering</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="quiz/Mechanical.php">Mechanical Engineering</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="quiz/Electrical.php">Electrical Engineering</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="quiz/Civil.php">Civil Engineering</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="quiz/php.php">PHP</a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="quiz/java.php">Java </a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="quiz/javascript.php">JavaScript </a></li>
+  <li class="list-group-item" style="text-align:center;"><a href="quiz/Android.php">Android Developing</a></li>
   
 </ul><hr>
 <h2 style="text-align: center;">Our Recruiters</h2>

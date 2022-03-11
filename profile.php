@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+  header("location: login.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +17,7 @@
     
 </head>
 <body>
+  <?php include("partials/_nav.php"); ?>
 <div class="container">
     <div class="main-body">
     
@@ -69,7 +77,7 @@
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Kenneth Valdez
+                      <?php echo $_SESSION['username']; ?>
                     </div>
                   </div>
                   <hr>
