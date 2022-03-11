@@ -73,21 +73,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form action="signup.php" method="post">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" maxlength="25" class="form-control" id="fullname" name="fullname" aria-describedby="emailHelp">
+                <input type="text" maxlength="25" class="form-control" id="fullname" name="fullname" aria-describedby="emailHelp" required>
 
             </div>
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+                <input type="text" maxlength="11" class="form-control" id="username" name="username" aria-describedby="emailHelp" required>
 
             </div>
             <div class="form-group">
                 <label for="collegename">College Name</label>
-                <input type="text" maxlength="25" class="form-control" id="collegename" name="collegename" aria-describedby="emailHelp">
+                <input type="text" maxlength="25" class="form-control" id="collegename" name="collegename" aria-describedby="emailHelp" required>
 
             </div>
             <div class="form-group">
-                <select class="form-select form-select-lg mb-3 form-control" aria-label=".form-select-lg example">
+                <select class="form-select form-select-lg mb-3 form-control" aria-label=".form-select-lg example" required>
                     <option selected style="font-weight:bold">Select Your Department</option>
                     <option value="1">Computer Engineering</option>
                     <option value="2">Civil Engineering</option>
@@ -98,11 +98,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" maxlength="23" class="form-control" id="password" name="password">
+                <input type="password" maxlength="23" class="form-control" id="password" name="password" required>
             </div>
             <div class="form-group">
                 <label for="cpassword">Confirm Password</label>
-                <input type="password" class="form-control" id="cpassword" name="cpassword">
+                <input type="password" class="form-control" id="cpassword" name="cpassword" required>
                 <small id="emailHelp" class="form-text text-muted">Make sure to type the same password</small>
             </div>
 
