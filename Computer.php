@@ -4,7 +4,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     header("location: login.php");
     exit;
 }
-
+include('partials/_nav.php');
 
 $show = false;
 ?>
@@ -41,9 +41,9 @@ $show = false;
     <div class="alert alert-primary" role="alert" style="text-align:center;">
         All the best <?php echo $_SESSION['username']; ?>
     </div>
-    <form action='android1.php'>
+    <form action='computer1.php' method="post">
         <div class="info">
-            <p> Our android questions focuses on all areas of android.
+            <p> Our Computer Engineering questions focuses on all areas of Computer Engineering.
                 These questions are chosen from the collection of authoritative and best reference books
             </p>
             <p class="center">
@@ -61,7 +61,7 @@ $show = false;
                 <!-- <li></li> -->
             </ul>
         <div class="submit">
-            <input type="submit" value="Start your test now">
+            <input type="submit" value="Start your test now" class="btn btn-primary">
         </div>
             
 

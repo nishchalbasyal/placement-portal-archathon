@@ -45,20 +45,25 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 <body>
     <?php
     include('partials/_nav.php')
-;    $count = 0;
-    // session_start();
-    $q1 = $_POST['q1'] = 0;
-    // echo $q1;
-    // echo "</br>";
-    $q2 = $_POST['q2'] = 0;
-    // echo $q2;
-    // echo "</br>";
-    $q3 = $_POST['q3'] = 0;
-    // echo $q3;
-    // echo "</br>";
-    $q4 = $_POST['q4'] = 0;
-    // echo $q4;
-    // echo "</br>";
+;   
+    // session_ = 0;
+    $q1=0;
+    echo $q1;
+    echo "</br>";
+    $q2 =  0;
+    echo $q2;
+    echo "</br>";
+    $q3 =  0;
+    echo $q3;
+    echo "</br>";
+    $q4 =  0;
+    echo $q4;
+    echo "</br>";
+    $q1 = $_POST['q1'];
+    $q2 = $_POST['q2'];
+    $q3 = $_POST['q3'];
+    $q4 = $_POST['q4'];
+    $count=0;
 
     if ($q1 == '1') {
         $count += 1;
@@ -73,6 +78,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         $count += 1;
     }
     $percent = ($count / 4) * 100;
+    echo $percent;
     if ($percent == 0) {
         echo "Sorry! " . $_SESSION['username'] . " Try next time";
     } else {

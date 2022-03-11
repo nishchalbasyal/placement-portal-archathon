@@ -41,9 +41,9 @@ $show = false;
     <div class="alert alert-primary" role="alert" style="text-align:center;">
         All the best <?php echo $_SESSION['username']; ?>
     </div>
-    <form action='electrical1.php'>
+    <form action='android1.php' method="post">
         <div class="info">
-            <p> Our electrical questions focuses on all areas of electrical.
+            <p> Our android questions focuses on all areas of android.
                 These questions are chosen from the collection of authoritative and best reference books
             </p>
             <p class="center">

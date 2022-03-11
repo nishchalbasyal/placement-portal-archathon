@@ -41,7 +41,7 @@ $show = false;
     <div class="alert alert-primary" role="alert" style="text-align:center;">
         All the best <?php echo $_SESSION['username']; ?>
     </div>
-    <form action='javascript1.php'>
+    <form action='javascript1.php' method="post">
         <div class="info">
             <p> Our javascript questions focuses on all areas of javascript.
                 These questions are chosen from the collection of authoritative and best reference books
