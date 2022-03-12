@@ -41,6 +41,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         #f1{
             background-color: black;
         }
+
+        .msgdisplay{
+            display: none;
+        }
         
     </style>
 </head>
@@ -96,6 +100,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     ?>
     <br><br>
     <p><h2 style="text-align: center;">You are eligible for any of these companies </h2></p> <br><br>
+    <div class="alert alert-warning msgdisplay " role="alert" id="msgdisplay">
+        Your Application Has been Sent To The Recruiters. You Will Get An Update Soon !!
+</div>
     <div class="apply">
         <div class="section">
 
@@ -104,7 +111,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                 <div class="card-body">
                     <h5 class="card-title">Infosys</h5>
                     <p class="card-text">Software company,Bengaluru,India.</p>
-                    <a href="#" class="btn btn-primary">Apply Now</a>
+                    <a href="#" class="btn btn-primary" onclick="myFunctions()">Apply Now</a>
                 </div>
             </div>
         </div>
@@ -115,7 +122,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                 <div class="card-body">
                     <h5 class="card-title">Yudiz Solutions</h5>
                     <p class="card-text">Software company,Ahmedabad,Gujarat.</p>
-                    <a href="#" class="btn btn-primary">Apply Now</a>
+                    <a href="#" class="btn btn-primary" onclick="myFunctions()">Apply Now</a>
                 </div>
             </div>
         </div>
@@ -125,7 +132,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                 <div class="card-body">
                     <h5 class="card-title">Tata Service Consultancy</h5>
                     <p class="card-text">Service Based Company,Jamshedpur,Jharkhand.</p>
-                    <button class="btn btn-primary">Apply Now</button>
+                    <button class="btn btn-primary" onclick="myFunctions()">Apply Now</button>
                 </div>
             </div>
         </div>
@@ -135,13 +142,24 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                 <div class="card-body">
                     <h5 class="card-title">Microsoft</h5>
                     <p class="card-title">Redmond,Washington,United States</p>
-                    <a href="#" class="btn btn-primary">Apply Now</a>
+                    <a href="#" class="btn btn-primary" onclick="myFunctions()">Apply Now</a>
                 </div>
             </div>
         </div>
 
     </div>
     <?php  include('footer.php'); ?>
+    <script>
+        function myFunctions(){
+            var x = document.getElementById("msgdisplay");
+            if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+        }
+    </script>
 </body>
 
 </html>

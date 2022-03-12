@@ -37,9 +37,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>John Doe</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                      <h4><?php echo $_SESSION['username']; ?></h4>
+                      <p class="text-secondary mb-1">Head Recruiter</p>
+                      <p class="text-muted font-size-sm">Rajkot,Gujarat</p>
                     </div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      fip@jukmuh.al
+                      sneupane@rku.ac.in
                     </div>
                   </div>
                   <hr>
@@ -95,7 +95,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                       <h6 class="mb-0">Phone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      (239) 816-9029
+                      877 6754766
                     </div>
                   </div>
                   <hr>
@@ -104,13 +104,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                       <h6 class="mb-0">Address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                    Rajkot,Gujarat
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                      <a class="btn btn-info " target="__blank" href="logout.php">logout</a>
                     </div>
                   </div>
                 </div>
