@@ -30,9 +30,15 @@ $show = false;
         .rules {
             font-weight: bold;
         }
-       
+
+        #f1 {
+            background-color: black;
+        }
+        .container{
+            height: 65vh;
+        }
     </style>
-   
+
 </head>
 
 <body>
@@ -41,49 +47,52 @@ $show = false;
     <div class="alert alert-primary" role="alert" style="text-align:center;">
         All the best <?php echo $_SESSION['username']; ?>
     </div>
-    <form action='computer1.php' method="post">
-        <div class="info">
-            <p> Our Computer Engineering questions focuses on all areas of Computer Engineering.
-                These questions are chosen from the collection of authoritative and best reference books
-            </p>
-            <p class="center">
-                Multiple choise Test
-            </p>
-            <p class="rules">
-                Rules and Regulations
-            </p>
-            <ul>
-                <li>The given times for this quiz is 45 minutes.After that ,the form will be closed for you.</li>
-                <li>Students who will not submit their answers in time then it will be automatically fetched.</li>
-                <li>You cannot change your answer after submission.</li>
-                <li>Each question has its own grading points.After you submit your answer we will evaluate your answers and let you know your grades later </li>
-                <li>If you have any technical problem during the quiz,please take screenshot or screen recording and send us.</li>
-                <!-- <li></li> -->
-            </ul>
-        <div class="submit">
-            <input type="submit" value="Start your test now" class="btn btn-primary">
-        </div>
-            
-
-          
-
-        </div>
+    <div class="container">
+        <form action='computer1.php' method="post">
+            <div class="info">
+                <p> Our Computer Engineering questions focuses on all areas of Computer Engineering.
+                    These questions are chosen from the collection of authoritative and best reference books
+                </p>
+                <p class="center">
+                    Multiple choise Test
+                </p>
+                <p class="rules">
+                    Rules and Regulations
+                </p>
+                <ul>
+                    <li>The given times for this quiz is 45 minutes.After that ,the form will be closed for you.</li>
+                    <li>Students who will not submit their answers in time then it will be automatically fetched.</li>
+                    <li>You cannot change your answer after submission.</li>
+                    <li>Each question has its own grading points.After you submit your answer we will evaluate your answers and let you know your grades later </li>
+                    <li>If you have any technical problem during the quiz,please take screenshot or screen recording and send us.</li>
+                    <!-- <li></li> -->
+                </ul>
+                <div class="submit">
+                    <input type="submit" value="Start your test now" class="btn btn-primary">
+                </div>
 
 
-    </form>
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+        </form>
+    </div>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+        <?php include('footer.php');  ?>
 </body>
 
 </html>

@@ -1,4 +1,37 @@
+<?php
+$login = false;
+$showError = false;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  include 'partials/_dbconnect.php';
+  $username = $_POST["username"];
+  $password = $_POST["password"];
 
+
+  // $exists=false;
+
+  $sql = "SELECT * FROM users WHERE username = '$username'";
+  $result = mysqli_query($conn, $sql);
+  $num = mysqli_num_rows($result);
+  if ($num == 1) {
+    while ($row = mysqli_fetch_assoc($result)) {
+      if (password_verify($password, $row['password'])) {
+        $login = true;
+        session_start();
+        $_SESSION['loggedin'] = true;
+        $_SESSION['username'] = $username;
+        if($_SESSION['username']=='suman'){
+          header("location: admin.php");
+        }else{
+        header("location: welcome.php");}
+      } else {
+        $showError = "Invalid Credentials!";
+      }
+    }
+  } else {
+    $showError = "Invalid Credentials!";
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +40,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Placement Portal</title>
+  <style>
+    #f1{
+      background-color: black;
+    }
+    .container{
+      height: 75vh;
+    }
+  </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
@@ -36,6 +77,7 @@
       </div>
     </div>
   </div>
+  <?php  include('footer.php');  ?>
 </body>
 
 </html>

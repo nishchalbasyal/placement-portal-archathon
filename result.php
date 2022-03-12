@@ -38,6 +38,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             margin-right: 40px;
             margin-left: 3px;
         }
+        #f1{
+            background-color: black;
+        }
         
     </style>
 </head>
@@ -48,17 +51,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 ;   
     // session_ = 0;
     $q1=0;
-    echo $q1;
-    echo "</br>";
+    // echo $q1;
+    // echo "</br>";
     $q2 =  0;
-    echo $q2;
-    echo "</br>";
+    // echo $q2;
+    // echo "</br>";
     $q3 =  0;
-    echo $q3;
-    echo "</br>";
+    // echo $q3;
+    // echo "</br>";
     $q4 =  0;
-    echo $q4;
-    echo "</br>";
+    // echo $q4;
+    // echo "</br>";
     $q1 = $_POST['q1'];
     $q2 = $_POST['q2'];
     $q3 = $_POST['q3'];
@@ -78,12 +81,16 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         $count += 1;
     }
     $percent = ($count / 4) * 100;
-    echo $percent;
+    // echo $percent;
     if ($percent == 0) {
-        echo "Sorry! " . $_SESSION['username'] . " Try next time";
+        echo '<div class="alert alert-danger" role="alert">
+        Sorry! '.$_SESSION['username'] .'Try next time again
+      </div>'
+      ;
     } else {
-        echo "weldone!" . $_SESSION['username'] . " your result is $percent%";
-    }
+        echo '<div class="alert alert-primary" role="alert">
+        Weldone! '.$_SESSION['username'] .'Your result is '.$percent.'%
+      </div>';}
 
 
     ?>
@@ -118,7 +125,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                 <div class="card-body">
                     <h5 class="card-title">Tata Service Consultancy</h5>
                     <p class="card-text">Service Based Company,Jamshedpur,Jharkhand.</p>
-                    <a href="#" class="btn btn-primary">Apply Now</a>
+                    <button class="btn btn-primary">Apply Now</button>
                 </div>
             </div>
         </div>
@@ -134,6 +141,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         </div>
 
     </div>
+    <?php  include('footer.php'); ?>
 </body>
 
 </html>
